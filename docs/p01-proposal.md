@@ -46,7 +46,7 @@ In order to find out whether the minimum wages increased, there are questions to
  - **What is represented in the data?**: U.S. state and federal minimum wages from 1968 to 2020
  - **What is an observation? What variables are included (an excluded)?**: An observation contains the following variables
 | **Observation** | **Description** |
-|-----------------|-----------------|
+| --------------- |:----------------|
 |Year | The year of the data |
 |State | The state or territory data |
 |State.Minimum.Wage | The state's minimum wage starting on January 1 |
