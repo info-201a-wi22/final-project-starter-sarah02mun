@@ -48,6 +48,7 @@ In order to find out whether the minimum wages increased, there are questions to
  - **Dataset size and complexity**: [Our dataset](https://www.kaggle.com/lislejoem/us-minimum-wage-by-state-from-1968-to-2017) consists of one file, comprised of 2,863 rows and 15 columns.
  - **What is represented in the data?**: U.S. state and federal minimum wages from 1968 to 2020
  - **What is an observation? What variables are included (an excluded)?**: An observation contains the following variables
+
 | **Observation** | **Description** |
 |-----------------|-----------------|
 |Year | The year of the data |
