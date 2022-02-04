@@ -1,7 +1,7 @@
 # Final Project Repository
 **INFO-201: _Foundational Skills For Data Science_ (Winter 2022)**
 
-*P01: Project Proposal*: [Project Proposal Title - Edit Me!](./docs/p01-proposal.md) 
+*P01: Project Proposal*: [Trends in U.S.Minimum Wage from 1968-2020](https://github.com/info-201a-wi22/final-project-starter-sarah02mun/blob/main/docs/p01-proposal.md) 
 
 
 |Project Directories | Brief Description|
