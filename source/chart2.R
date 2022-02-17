@@ -21,8 +21,9 @@ ggplot() +
   geom_line(data = df, aes(x = Year, y = State.Minimum.Wage, color = "WA Minimum Wage")) + 
   labs(
     x = "Year",
-    y = "$",
-    color = "Legend"
+    y = "Amount ($)",
+    color = "Legend",
+    title = "Comparing WA Minimum Wage to CPI Average by Year"
   ) + 
   scale_color_manual(
     name = "Legend",
