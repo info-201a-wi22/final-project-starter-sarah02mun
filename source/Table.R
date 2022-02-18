@@ -1,18 +1,14 @@
 library("dplyr")
 
-setwd("~/Info-project/final-project-starter-sarah02mun/data")
-
-min_wage_data <- read.csv("Minimum-Wage-Data.csv", stringsAsFactors = FALSE)
+min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", stringsAsFactors = FALSE)
 
 #View (min_wage_data)
 
-
+#What is the average minimum wage of all 50 states in each year
 get_table <- min_wage_data %>%
   group_by(Year) %>%
-  summarize(state_min = min(State.Minimum.Wage), state_max = max(State.Minimum.Wage))  %>%
-  arrange(desc(state_max)) %>%
-  mutate (prop = round((Avg_State.Mimimum.Wage = State.Mimimum.Wage/ nrow(min_wage_data)) * 100))
+  summarize(avg_min_wage = mean(State.Minimum.Wage))
   
-  return (get_table) 
+
 
 

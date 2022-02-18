@@ -69,11 +69,12 @@ Although the data in this database shows us the correlation between the minimum 
 
 library("plotly")
 library("tidyverse")
-
+library("kableExtra")
 source("../source/chart1.R")
 source("../source/chart2.R")
 source("../source/chart 3.R")
 source("../source/summary.R")
+source("../source/Table.R")
 ```
 
 # Summary Information
@@ -97,3 +98,8 @@ plot(line_plot)
 plot(scatter_plot)
 ```
 # Table - Fatima
+```{r}
+kable(get_table) %>%
+  kable_styling("striped", full_width = FALSE)
+```
+
