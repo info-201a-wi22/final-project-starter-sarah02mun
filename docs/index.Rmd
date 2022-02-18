@@ -4,7 +4,7 @@ author: "Fatima Aslsinai, Sarah Mun, Vianne Buinguyen, Victor Ahn"
 date: "2/18/2022"
 output: html_document
 ---
-#Report Elements
+# Report Elements
 ## Abstract
 Our main question for this data set is "How does the consumer price index change relative to state wage?". This question is particularly important because it tells us whether or not employees are making enough money to purchase goods and necessities. To address this question, we will use `R` to extract data from the [Minimum Wage dataset](../data/Minimum-Wage-Data.csv) that we obtained from the Kaggle website, and write our reports in Atom using Markdown.
 
@@ -124,7 +124,7 @@ plot(scatter_plot)
 
 
 # Table: Computing Ratio of State Minimum Wage to Average CPI for Each State in 2020
-Our table shows the ratio of the state minimum wage to average CPI in 2020. We computed this table to compare each state's minimum wage to the average CPI. We arranged the table from highest value to lowest. This will let us identify which states have the most livable wages and allow their citizens to best afford a market basket of consumer goods. As the table reveals, the states with the highest state minimum wage to average CPI ratios are D.C., Washington state, and California. The the states with the lowest state minimum wage to average CPI ratios are Louisiana, Tennessee, Mississippi, Alabama, and South Carolina--all having a value of 0. The pattern that we see here was pointed out in previous paragraphs. Liberal states with high costs of living, such as D.C., Washington, and California tend to have higher state minimum wages and, in turn, higher state minimum wage to average CPI ratios. Conversely, less liberal states with lower costs of living, like Louisiana, Tennessee, Mississippi, Alabama, and South Carolina tend to have lower state minimum wages and,in turn, lower state minimum wage to average CPI ratios.
+Our table shows the ratio of the state minimum wage to average CPI in 2020. We computed this table to compare each state's minimum wage to the average CPI. We arranged the table from highest value to lowest. This will let us identify which states have the most livable wages and allow their citizens to best afford a market basket of consumer goods. As the table reveals, the states with the highest state minimum wage to average CPI ratios are D.C., Washington state, and California. The states with the lowest state minimum wage to average CPI ratios are Louisiana, Tennessee, Mississippi, Alabama, and South Carolina--all having a value of 0. The pattern that we see here was pointed out in previous paragraphs. Liberal states with high costs of living, such as D.C., Washington, and California tend to have higher state minimum wages and, in turn, higher state minimum wage to average CPI ratios. Conversely, less liberal states with lower costs of living, like Louisiana, Tennessee, Mississippi, Alabama, and South Carolina tend to have lower state minimum wages and, in turn, lower state minimum wage to average CPI ratios.
 ```{r}
 kable(state_min_wage_to_CPI) %>%
   kable_styling("striped", full_width = FALSE)
