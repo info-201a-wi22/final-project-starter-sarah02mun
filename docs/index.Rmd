@@ -103,6 +103,7 @@ fig
 ```
 
 # Comparing Washington State Minimum Wage to Average CPI Over Time - Sarah
+The purpose of this chart is to show how the minimum wage of Washington changes in relation to the average CPI between the years of 1968 and 2020. This chart is important because it shows how the prices of goods continue to increase while the minimum wage stays at a relatively low value. Since the CPI is reflective of the U.S. rise in inflation, we can use this chart to understand how this gap in minimum wage and CPI affects consumer spending. One notable observation is that the CPI is far higher than the minimum wage in Washington for all years. This shows that those receiving minimum wage may not be able to afford goods as the price inflates, thus demonstrating a need for higher wages. 
 ```{r}
 plot(line_plot)
 ```
