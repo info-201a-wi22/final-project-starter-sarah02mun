@@ -65,6 +65,21 @@ Based on our research questions, we believe that policymakers would be most affe
 ## Limitations
 Although the data in this database shows us the correlation between the minimum wage increase and the average value of the Consumer Price Index in a year, there are limitations to the data which must be recognized. There is no data on the types of products the population purchases or information about the products’ cost overtime. Thus, we can’t compare how competitive the labor market is since we do not have the weight of each category in the basket. Also, there is no data about the job market which limits the use of the data for the purposes of analyzing employment trends. We also can’t use the data to determine the negative implications, such as the amount of jobs lost/gained or inflation due to the increase in minimum wage. Additionally, we are unable to identify the change in employment rates of one state relative to other states.
 
+## References
+Changes in basic minimum wages in non-farm employment under state law: Selected years 1968 to 2021. (n.d.). Dol.Gov. Retrieved February 4, 2022, from https://www.dol.gov/agencies/whd/state/minimum-wage/history
+
+CPI home. (2017, October 11). Bls.Gov. https://www.bls.gov/cpi/
+
+Kenton, W. (2021, December 30). Working Class. Investopedia. https://www.investopedia.com/terms/w/working-class.asp
+
+Lislejoem. (n.d.). US Minimum Wage by state from 1968 to 2020 [Data set].
+
+Most Americans support a $15 federal minimum wage. (2021, April 22). Pew Research Center. https://www.pewresearch.org/fact-tank/2021/04/22/most-americans-support-a-15-federal-minimum-wage/
+
+Saige Draeger, L. K. (n.d.). Increasing the minimum wage. Ncsl.Org. Retrieved February 4, 2022, from https://www.ncsl.org/research/labor-and-employment/increasing-the-minimum-wage.aspx
+
+Selyukh, A. (2021, February 8). $15 minimum wage would reduce poverty but cost jobs, CBO says. NPR. https://www.npr.org/2021/02/08/965483266/-15-minimum-wage-would-reduce-poverty-but-cost-jobs-cbo-says
+
 ```{r setup, include=FALSE}
 
 library("plotly")
@@ -89,6 +104,7 @@ fig
 ```
 
 # Comparing Washington State Minimum Wage to Average CPI Over Time - Sarah
+The purpose of this chart is to show how the minimum wage of Washington changes in relation to the average CPI between the years of 1968 and 2020. This chart is important because it shows how the prices of goods continue to increase while the minimum wage stays at a relatively low value. Since the CPI is reflective of the U.S. rise in inflation, we can use this chart to understand how this gap in minimum wage and CPI affects consumer spending. One notable observation is that the CPI is far higher than the minimum wage in Washington for all years. This shows that those receiving minimum wage may not be able to afford goods as the price inflates, thus demonstrating a need for higher wages. 
 ```{r}
 plot(line_plot)
 ```
