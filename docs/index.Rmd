@@ -5,8 +5,12 @@ date: "2/18/2022"
 output: html_document
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Report Elements
 =======
+=======
+
+>>>>>>> 020b1c91561204d28c27a7e082a0f6cd9a64c559
 #Report Elements
 
 >>>>>>> d94c47d31a7ab1f1349cf1a0068acfc0b6ec339e
