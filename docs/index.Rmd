@@ -4,7 +4,7 @@ author: "Fatima Aslsinai, Sarah Mun, Vianne Buinguyen, Victor Ahn"
 date: "2/18/2022"
 output: html_document
 ---
-<<<<<<< HEAD
+
 # Report Elements
 
 ## Abstract
