@@ -5,10 +5,10 @@ library(tidyr)
 library(ggplot2)
 
 # Set working directory
-setwd("~/Desktop/INFO-201-coding/final-project-starter-sarah02mun/data")
+
 
 # Load data
-min_wage_data <- read.csv("Minimum-Wage-Data.csv", stringsAsFactors = FALSE)
+min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", stringsAsFactors = FALSE)
 
 # Filter the data to get the minimum wage for Washington state and the CPI
 df <- min_wage_data %>%
@@ -16,7 +16,7 @@ df <- min_wage_data %>%
   select(Year, State.Minimum.Wage, CPI.Average)
 
 # Make a line plot
-ggplot() +
+line_plot <- ggplot() +
   geom_line(data = df, aes(x = Year, y = CPI.Average, color = "CPI Average")) +
   geom_line(data = df, aes(x = Year, y = State.Minimum.Wage, color = "WA Minimum Wage")) + 
   labs(

@@ -1,11 +1,8 @@
 #load packages
 library("dplyr")
 
-#set wd
-setwd("~/Desktop/INFO-201-coding/final-project-starter-sarah02mun/data")
-
 #load dataset
-min_wage_data <- read.csv("Minimum-Wage-Data.csv",
+min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv",
                             stringsAsFactors = FALSE)
 #summary list
 summary_info <- list()

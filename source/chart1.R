@@ -45,5 +45,4 @@ fig <- fig %>% layout(
   geo = g
 )
 
-fig
 
