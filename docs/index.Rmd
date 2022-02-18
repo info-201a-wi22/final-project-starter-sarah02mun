@@ -5,15 +5,8 @@ date: "2/18/2022"
 output: html_document
 ---
 <<<<<<< HEAD
-<<<<<<< HEAD
 # Report Elements
-=======
-=======
 
->>>>>>> 020b1c91561204d28c27a7e082a0f6cd9a64c559
-#Report Elements
-
->>>>>>> d94c47d31a7ab1f1349cf1a0068acfc0b6ec339e
 ## Abstract
 Our main question for this data set is "How does the consumer price index change relative to state wage?". This question is particularly important because it tells us whether or not employees are making enough money to purchase goods and necessities. To address this question, we will use `R` to extract data from the [Minimum Wage dataset](../data/Minimum-Wage-Data.csv) that we obtained from the Kaggle website, and write our reports in Atom using Markdown.
 
