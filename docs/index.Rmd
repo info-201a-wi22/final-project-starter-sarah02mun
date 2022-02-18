@@ -93,30 +93,41 @@ source("../source/Table.R")
 ```
 
 # Summary Information
-The first value we calculated for our summary list is a vector containing Washington state’s minimum wage from 1968 to 2020. The second value is a vector containing the federal minimum wage from 1968 to 2020. The third value is a vector containing the average consumer price index from 1968 to 2020. The fourth value is a vector containing the ratio of Washington state’s minimum wage to the average CPI (calculated by dividing Washington state’s minimum wage by the average CPI) from 1968 to 2020. The fifth value is a vector containing the ratio of the federal minimum wage to the average CPI (calculated by dividing the federal minimum wage by the average CPI) from 1968 to 2020.
-```{r}
+For the summary information, we wanted to compare minimum wage to the average consumer price index in 2020. We did this by finding the ratio of the minimum wage to the average CPI (minimum wage divided by average CPI) for five state minimum wages as well as the federal minimum wage. This information lets us identify which states have the most livable wages. For the five states, we chose to look at one from each of the five regions of the United States: Washington for West, Texas for Southwest, Michigan for Midwest, Alabama for Southeast, and New York for Northeast. We also wanted to choose states with different levels of minimum wage. We were able to represent a relatively large range of minimum wage, with the lowest value being $0 and the highest being $13.50. Washington, New York, and Michigan had the highest state minimum wage to average CPI ratios of `r summary_info$wa_min_wage_to_cpi`, `r summary_info$ny_min_wage_to_cpi`, `r summary_info$mi_min_wage_to_cpi`, respectively. Our research indicates that states with higher liberal voting records are more likely to have higher minimum wages--and therefore, higher state minimum wage to average CPI ratios (Ford et al.). This matches up with our results as Washington, New York, and Michigan are all left-leaning states. Our research also shows that cost of living has a positive relationship to state minimum wage. It makes sense that Washington and New York have the highest state minimum wage to average CPI ratios, since their cost of living factors are the highest of all five states. Texas and Alabama have the lowest state minimum wage to average CPI ratios of `r summary_info$tx_min_wage_to_cpi` and 0, respectively. This matches up with the evidence since Texas and Alabama are right-leaning states with lower cost of living factors (since they are rural instead of urban states). The federal minimum wage to average CPI ratio is `r summary_info$fed_min_wage_to_cpi`. It makes sense that the three states with a higher ratio than this are all liberal. 
+```{r, include=FALSE}
 summary_info
 ```
-# US Minimum Wages in 2020 - Vianne
-The purpose of this chart is to see how the minimum wage differed across all 50 US states in the year 2020. I created a choropleth map to visualize which states had the highest minimum wage (highlighted in dark purple) and which states had the lowest minimum wage (highlighted in white). One notable insight I identified was that Louisiana, Tennessee, Mississippi, Alabama, and South Carolina all had a minimum wage of $0 in 2020. There appears to be a trend that southern states had the lowest minimum wages, while states on the west coast and upper east coast had the highest minimum wages.
+- **Washington:** `r summary_info$wa_min_wage_to_cpi`
+- **Texas:** `r summary_info$tx_min_wage_to_cpi`
+- **Alabama:** `r summary_info$al_min_wage_to_cpi`
+- **New York:** `r summary_info$ny_min_wage_to_cpi`
+- **Michigan:** `r summary_info$mi_min_wage_to_cpi`
+- **Federal:** `r summary_info$fed_min_wage_to_cpi`
+
+# Chart 1: US Minimum Wages in 2020 
+The purpose of this chart is to see how the minimum wage differed across all 50 US states in the year 2020. Creating a choropleth map, allows us to easily visualize which states had the highest minimum wage (highlighted in dark purple) and which states had the lowest minimum wage (highlighted in white) in 2020. One notable insight is that Louisiana, Tennessee, Mississippi, Alabama, and South Carolina all had a state minimum wage of $0 in 2020. There appears to be a trend that southern states had the lowest minimum wages, while states on the west coast and upper east coast had the highest minimum wages. As mentioned in the 'Summary Information' section, the lower state minimum wages in southern states are influenced by southern states' low proportion of liberal voting records and low cost of living. 
 ```{r}
 fig
 ```
 
-# Comparing Washington State Minimum Wage to Average CPI Over Time - Sarah
+# Chart 2: Comparing Washington State Minimum Wage to Average CPI Over Time
 The purpose of this chart is to show how the minimum wage of Washington changes in relation to the average CPI between the years of 1968 and 2020. This chart is important because it shows how the prices of goods continue to increase while the minimum wage stays at a relatively low value. Since the CPI is reflective of the U.S. rise in inflation, we can use this chart to understand how this gap in minimum wage and CPI affects consumer spending. One notable observation is that the CPI is far higher than the minimum wage in Washington for all years. This shows that those receiving minimum wage may not be able to afford goods as the price inflates, thus demonstrating a need for higher wages. 
 ```{r}
 plot(line_plot)
 ```
 
-# Comparing Change in Minimum Wage in Each State - Victor
-The purpose of this chart is to visualize changes in state-minimum wage in every state in the United States. This chart is important because it visualizes how minimum wages in different states have changed over time from 1968 to 2020.Changes vary state from state. With the information from chart, we are able to compare the changes in CPI in every state and verify whether the minimum wage in certain states has increased enough to catch up with the change in CPI.
+# Chart 3: Comparing Change in Minimum Wage in 5 States
+The purpose of this chart is to visualize changes in state-minimum wage in every state in the United States. This chart is important because it visualizes how minimum wages in different states have changed over time from 1968 to 2020. Changes vary state from state. With the information from chart, we are able to compare the changes in CPI in every state and verify whether the minimum wage in certain states has increased enough to catch up with the change in CPI.
 ```{r}
 plot(scatter_plot)
 ```
-# Table - Fatima
+
+
+# Table: Computing Ratio of State Minimum Wage to Average CPI for Each State in 2020
+Our table shows the ratio of the state minimum wage to average CPI in 2020. We computed this table to compare each state's minimum wage to the average CPI. We arranged the table from highest value to lowest. This will let us identify which states have the most livable wages and allow their citizens to best afford a market basket of consumer goods. As the table reveals, the states with the highest state minimum wage to average CPI ratios are D.C., Washington state, and California. The the states with the lowest state minimum wage to average CPI ratios are Louisiana, Tennessee, Mississippi, Alabama, and South Carolina--all having a value of 0. The pattern that we see here was pointed out in previous paragraphs. Liberal states with high costs of living, such as D.C., Washington, and California tend to have higher state minimum wages and, in turn, higher state minimum wage to average CPI ratios. Conversely, less liberal states with lower costs of living, like Louisiana, Tennessee, Mississippi, Alabama, and South Carolina tend to have lower state minimum wages and,in turn, lower state minimum wage to average CPI ratios.
 ```{r}
-kable(get_table) %>%
+kable(state_min_wage_to_CPI) %>%
   kable_styling("striped", full_width = FALSE)
 ```
-
+# References
+Ford, W. F., Minor, T., & Owens, M. F. (2012). State minimum wage differences: Economic factors or political inclinations? Business Economics (Cleveland, Ohio), 47(1), 57–67. https://doi.org/10.1057/be.2011.37
