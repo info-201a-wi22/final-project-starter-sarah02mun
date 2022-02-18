@@ -126,7 +126,7 @@ plot(line_plot)
 ```
 
 # Chart 3: Comparing Change in Minimum Wage in 5 States
-The purpose of this chart is to visualize changes in state-minimum wage in every state in the United States. This chart is important because it visualizes how minimum wages in different states have changed over time from 1968 to 2020. Changes vary state from state. With the information from chart, we are able to compare the changes in CPI in every state and verify whether the minimum wage in certain states has increased enough to catch up with the change in CPI.
+The purpose of this chart is to visualize changes in state-minimum wage in five different states from every region in the United States. This chart is important because it visualizes how minimum wages in different states have changed over time from 1968 to 2020. Changes vary state from state. With the information from chart, we are able to compare the changes in CPI in those states and verify whether the minimum wage in certain states or regions has increased enough to catch up with the change in CPI.
 ```{r}
 plot(scatter_plot)
 ```
