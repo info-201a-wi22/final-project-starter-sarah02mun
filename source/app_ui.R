@@ -1,6 +1,9 @@
 # load packages 
 library("shiny")
 
+# source files
+source("tabs/tab_panel_chart_2.R")
+
 # sidebar content for chart 1
 chart1_sidebar_content <- sidebarPanel()
 
