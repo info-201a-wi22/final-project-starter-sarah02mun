@@ -1,19 +1,33 @@
 # load packages 
 library("shiny")
 
-# source files
-source("tabs/tab_panel_chart_2.R")
+# load data
+min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
+                          stringsAsFactors = FALSE)
 
+  
 # sidebar content for chart 1
-chart1_sidebar_content <- sidebarPanel()
+chart1_sidebar_content <- sidebarPanel(
+  sliderInput(
+    inputId = "year_chart_1",
+    label = "Year to map",
+    min = 1968,
+    max = 2020,
+    value = 2020,
+    step = 1,
+    sep = ''
+  )
+)
 
 # main content for chart 1
-chart1_main_content <- mainPanel()
+chart1_main_content <- mainPanel(
+  plotlyOutput("map")
+)
 
 # tab panel for chart 1
 chart1_panel <- tabPanel(
-  "Chart 1",
-  titlePanel("Chart 1"), 
+  "Map",
+  titlePanel("US State Minimum Wages"), 
   sidebarLayout(
     chart1_sidebar_content,
     chart1_main_content
@@ -52,40 +66,36 @@ chart3_panel <- tabPanel(
   )
 )
 
-# main panel for introduction
-intro_main_content <- mainPanel()
 
 # tab panel for introduction
 intro_panel <- tabPanel( 
   "Introduction",
   titlePanel("Introduction"),
-  intro_main_content
-) 
+  fluidPage(
+    tags$img(src = "../docs/Minimum-Wage.jpg")
+  )
+)
 
-# main panel for summary
-summary_main_content <- mainPanel()
 
 # tab panel for summary
 summary_panel <- tabPanel( 
   "Summary",
-  titlePanel("Summary"),
-  intro_main_content
+  titlePanel("Summary")
 )
 
-# main panel for report
-report_main_content <- mainPanel()
 
 # tab panel for report
 report_panel <- tabPanel( 
   "Report",
-  titlePanel("Report"),
-  intro_main_content
+  fluidPage(
+    includeMarkdown('../docs/p01-proposal.md')
+  )
 )
 
 # Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- navbarPage(
-  "Final Deliverable",
+  "Analyzing US Minimum Wage Trends",
   intro_panel,
   chart1_panel,
   chart2_panel,

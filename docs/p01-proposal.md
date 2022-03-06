@@ -1,17 +1,17 @@
 # Trends in U.S. Minimum Wage from 1968-2020
 
-**Project Code Name**: AMBA
+**Project Code Name**:<br>AMBA
 
-**Authors**: \
-Fatima Alsinai: alsinf@uw.edu \
-Sarah Mun: sarahhm@uw.edu \
-Vianne Buinguyen: vianneb@uw.edu \
-Victor Ahn: victor971125@uw.edu
+**Authors**:<br> 
+Fatima Alsinai: alsinf@uw.edu<br>
+Sarah Mun: sarahhm@uw.edu<br>
+Vianne Buinguyen: vianneb@uw.edu<br>
+Victor Ahn: victor971125@uw.edu<br>
 
-**Affiliation**: \
+**Affiliation**:<br> 
 INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 
-**Date**: \
+**Date**:<br> 
 Winter 2022
 
 ## Abstract
@@ -37,38 +37,55 @@ Changes made to the minimum wage, particularly raising it, comes with benefits a
 
 ## Research Questions
 1. How has Washington's state minimum wage changed over time?
+
+
 2. How does the ratio of the federal minimum wage to consumer price index change over time?
-3. How does the ratio of Washington state minimum wage to consumer price index change over time? \
-Minimum Wage/CPI ( > 1 : Things are cheaper | 1: Same |  1 > : Things are more expensive)
+
+
+3. How does the ratio of Washington state minimum wage to consumer price index change over time?
+
+  Minimum Wage/CPI ( > 1 : Things are cheaper | 1: Same |  1 > : Things are more expensive)
+
+
 4. How does the federal minimum wage rate of increase compare to the consumer price index rate of increase?
 
 In order to find out whether the minimum wages increased, there are questions to be asked. First, it is important to find out how Washington's state wage has changed over time. By doing so, we are able to compare it with the CPI. Besides state wage, we also have to question the change of  Federal wage over time. As we did for state wage, we should also try to compare Federal wage with CPI. These two different comparisons will give us a complete understanding over the ratio of minimum wage and the consumer price index.
 
 ## The Dataset
- - **Dataset size and complexity**: [Our dataset](https://www.kaggle.com/lislejoem/us-minimum-wage-by-state-from-1968-to-2017) consists of one file, comprised of 2,863 rows and 15 columns.
+ - **Dataset size and complexity**: [Our dataset](https://www.kaggle.com/lislejoem/us-minimum-wage-by-state-from-1968-to-2017) consists of one file, comprised of 2,863 rows and 15 columns.  
+ 
+ 
  - **What is represented in the data?**: U.S. state and federal minimum wages from 1968 to 2020
+ 
+ 
  - **What is an observation? What variables are included (an excluded)?**: An observation contains the following variables
 
-| **Observation** | **Description** |
-|-----------------|-----------------|
-|Year | The year of the data |
-|State | The state or territory data |
-|State.Minimum.Wage | The state's minimum wage starting on January 1 |
-|State.Minimum.Wage.2020.Dollars | The state minimum wage converted to 2020 dollars |
-|Federal.Minimum.Wage | The federal minimum wage starting January 1 |
-Federal.Minimum.Wage.2020.Dollars | The federal minimum wage converted to 2020 dollars |
-|Effective.Minimum.Wage | The minimum wage that is enforced in the state on January 1. This value would equal the federal minimum wage if the state minimum wage is lower than the federal minimum wage |
-|Effective.Minimum.Wage.2020.Dollars | The effective minimum wage converted to 2020 dollars |
-|CPI.Average | The average value of the consumer price index. The consumer price index is a "measure of the average change over time in the prices paid by urban consumers for a market basket of goods and services" (U.S. Bureau of Labor Statistics). |
-|Department.Of.Labor.Uncleaned.Data | The unclean, scraped value from the United States Department of Labor's website. |
-|Department.Of.Labor.Cleaned.Low.Value | The state’s lowest enforced minimum wage on January 1. Some states enforce different minimum wage laws depending on the size of the business, with smaller businesses typically having lower minimum wage requirements. |
-|Department.Of.Cleaned.Low.Value.2020.Dollars | The state's lowest enforced minimum wage in 2020 dollars |
-|Department.Of.Labor.Cleaned.High.Value | The state's highest enforced minimum wage of January 1 |
-|Department.Of.Labor.Cleaned.High.Value.2020.Dollars | The state's highest enforced minimum wage in 2020 dollars |
-|Footnote | The footnote provided on the United States Department of Labor's website, if any |
 
+  | **Observation** | **Description** |
+  |-----------------|-----------------|
+  |Year | The year of the data |
+  |State | The state or territory data |
+  |State.Minimum.Wage | The state's minimum wage starting on January 1 |
+  |State.Minimum.Wage.2020.Dollars | The state minimum wage converted to 2020 dollars |
+  |Federal.Minimum.Wage | The federal minimum wage starting January 1 |
+  Federal.Minimum.Wage.2020.Dollars | The federal minimum wage converted to 2020 dollars |
+  |Effective.Minimum.Wage | The minimum wage that is enforced in the state on January 1. This value would equal the federal minimum wage if the state minimum wage is lower than the federal minimum wage |
+  |Effective.Minimum.Wage.2020.Dollars | The effective minimum wage converted to 2020 dollars |
+  |CPI.Average | The average value of the consumer price index. The consumer price index is a "measure of the average change over time in the prices paid by urban consumers for a market basket of goods and services" (U.S. Bureau of Labor Statistics). |
+  |Department.Of.Labor.Uncleaned.Data | The unclean, scraped value from the United States Department of Labor's website. |
+  |Department.Of.Labor.Cleaned.Low.Value | The state’s lowest enforced minimum wage on January 1. Some states enforce different minimum wage laws depending on the size of the business, with smaller businesses typically having lower minimum wage requirements. |
+  |Department.Of.Cleaned.Low.Value.2020.Dollars | The state's lowest enforced minimum wage in 2020 dollars |
+  |Department.Of.Labor.Cleaned.High.Value | The state's highest enforced minimum wage of January 1 |
+  |Department.Of.Labor.Cleaned.High.Value.2020.Dollars | The state's highest enforced minimum wage in 2020 dollars |
+  |Footnote | The footnote provided on the United States Department of Labor's website, if any |  
+
+<br>
 - **Who collected the data? For what purpose? How was the data collection effort funded? Who is likely to benefit from the data or make money?**: This dataset was put together by Kaggle contributor, Lislejoem, who cleaned and aggregated data that was scraped from the [United States Department of Labor's table of minimum wage by state](https://www.dol.gov/agencies/whd/state/minimum-wage/history). The Kaggle dataset contains state and federal minimum wage data from 1968 to 2020 and was last updated on December 31, 2020. Lislejoem claims to have put this together because "While looking online for a clean dataset for minimum wage data by state, I was having trouble finding one. I decided to create one myself and provide it to the community" (Lislejoem). This data collection effort was not funded and was done purely due to the recognition of the need for a comprehensive clean dataset for minimum wage data by state. While the creator of this dataset will not make money, working class Americans may benefit from efforts to raise minimum wage standards that may result from the analysis of this dataset.
+
+
 - **How was the data validated and held secure? Is it credible and trustworthy?**: The original data comes from the United States Department of Labor. Since this is a cabinet-level department of the United States federal government that is responsible for wage a hour standards, we can be sure its a minimum wage data is the most accurate and valid form available. Additionally, we can be sure that this data was held secure since the federal government's data infrastructure is strongly protected by the Cyber & Infrastructure Security Agency, meaning federal government data breach incidents rarely occur.
+
+
 - **How did you obtain the data? Do you credit the source of the data?**: We obtained the dataset through Kaggle. It is cited in our References section.
 
 ## Expected Implications
