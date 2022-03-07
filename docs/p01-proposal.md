@@ -36,18 +36,14 @@ The direct stakeholders of our topic of interest are working class Americans, wh
 Changes made to the minimum wage, particularly raising it, comes with benefits and consequences. The most obvious benefit would be lifting low-wage workers and their families out of poverty. According to the nonpartisan Congressional Budget Office (CBO), increasing the minimum wage to $15 could lift 900,000 people out of poverty. However, increasing the minimum wage means increasing the cost of hiring a worker – which may not be sustainable for smaller businesses. The CBO estimates that "raising the federal minimum wage to $15 an hour by 2025 would increase wages for at least 17 million people, but also put 1.4 million Americans out of work" (NPR). The CBO adds, "Young, less educated people would account for a disproportionate share of those reductions in employment" (NPR).
 
 ## Research Questions
-1. How has Washington's state minimum wage changed over time?
+1. How has the US states' minimum wage changed over time?
 
 
-2. How does the ratio of the federal minimum wage to consumer price index change over time?
+2. How has the federal minimum wage changed compared to consumer price index over time?
 
 
-3. How does the ratio of Washington state minimum wage to consumer price index change over time?
+3. How does the ratio of the US states' minimum wage to consumer price index change over time?
 
-  Minimum Wage/CPI ( > 1 : Things are cheaper | 1: Same |  1 > : Things are more expensive)
-
-
-4. How does the federal minimum wage rate of increase compare to the consumer price index rate of increase?
 
 In order to find out whether the minimum wages increased, there are questions to be asked. First, it is important to find out how Washington's state wage has changed over time. By doing so, we are able to compare it with the CPI. Besides state wage, we also have to question the change of  Federal wage over time. As we did for state wage, we should also try to compare Federal wage with CPI. These two different comparisons will give us a complete understanding over the ratio of minimum wage and the consumer price index.
 
