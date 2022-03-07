@@ -4,7 +4,7 @@ library(ggplot2)
 library(plotly)
 library(dplyr)
 
-source("~/Desktop/INFO-201-coding/final-project-starter-sarah02mun/source/chart2.R")
+source("chart2.R")
 
 ## TAB CODE
 fed_min_wage <- min_wage_data %>%
