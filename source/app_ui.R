@@ -35,15 +35,23 @@ chart1_panel <- tabPanel(
 )
 
 # sidebar content for chart 2
-chart2_sidebar_content <- sidebarPanel()
+chart2_sidebar_content <- sidebarPanel(
+  radioButtons(
+    inputId = "dollars",
+    label = "Dollar Conversion:",
+    choices = c("By year",
+                "2020 dollars")
+  )
+)
 
 # main content for chart 2
-chart2_main_content <- mainPanel()
+chart2_main_content <- mainPanel(
+  plotlyOutput("line"))
 
 # tab panel for chart 2
 chart2_panel <- tabPanel(
-  "Chart 2",
-  titlePanel("Chart 2"), 
+  "Line Chart",
+  titlePanel("Federal Minimum Wage vs. CPI Over Time"), 
   sidebarLayout(
     chart2_sidebar_content,
     chart2_main_content
