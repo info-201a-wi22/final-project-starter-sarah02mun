@@ -1,10 +1,6 @@
 # load packages 
 library("shiny")
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c9842b4ecc644b82e177eb2440b5ee20020a5b3d
 # load data
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
                           stringsAsFactors = FALSE)
@@ -55,7 +51,13 @@ chart2_main_content <- mainPanel(
 # tab panel for chart 2
 chart2_panel <- tabPanel(
   "Line Chart",
-  titlePanel("Federal Minimum Wage vs. CPI Over Time"), 
+  titlePanel("Federal Minimum Wage vs. CPI Over Time"),
+  fluidPage(
+    p("This chart attempts to answer the question of how federal minimum wage 
+  compares to CPI average over time. From this we can see how the cost of 
+  living has changed over time and understand how the minimum wage affects 
+  consumers' ability to pay for goods and services.")
+  ),
   sidebarLayout(
     chart2_sidebar_content,
     chart2_main_content
