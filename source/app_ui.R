@@ -1,6 +1,10 @@
 # load packages 
 library("shiny")
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c9842b4ecc644b82e177eb2440b5ee20020a5b3d
 # load data
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
                           stringsAsFactors = FALSE)
@@ -63,8 +67,10 @@ chart3_sidebar_content <- sidebarPanel(
   selectInput(inputId = "Statemw", 
               label = "State:",
               choices = min_wage_data$State
+
   )
-  )
+
+)
 
 # main content for chart 3
 chart3_main_content <- mainPanel(
@@ -104,7 +110,7 @@ Through this dataset, we were able to examine how the changes in minimum wage af
 and state minimum wage to answer our research questions."),
     
     
-    h1("Research Questions"),
+    h3("Research Questions"),
     
     p("How has the US states' minimum wage changed over time?"),
     p("How has the federal minimum wage changed compared to consumer price index over time?"),
