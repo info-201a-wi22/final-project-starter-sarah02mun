@@ -27,3 +27,7 @@ chart_2 <- ggplot(fed_min_wage) +
   )
 
 chart_2
+
+# Chart description
+p("This chart attempts to answer the question of how federal minimum wage compares
+to CPI average over time. ")
