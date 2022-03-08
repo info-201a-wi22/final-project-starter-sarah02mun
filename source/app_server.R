@@ -34,4 +34,23 @@ server <- function(input, output) {
         values = c("Federal Minimum Wage" = "blue", "CPI" = "red")
       )
   })
+  
+  # Chart 3
+  output$scatterplot  <- renderPlotly({
+    
+    plot_data <- min_wage_data %>% 
+      filter(State == input$Statemw) %>% 
+      select(Year, State, State.Minimum.Wage)
+    
+    year_ <- plot_data$Year
+    state_minimum <- plot_data$State.Minimum.Wage
+    
+    scatter_plot <- ggplot(data = plot_data, mapping = aes(x = year_, y = state_minimum)) + 
+      geom_point() + 
+      labs( x = "State Minimum Wage",
+            y = "Year",
+            title = "Change in State Minimum Wages Over Time"
+      )
+    
+  })
 }

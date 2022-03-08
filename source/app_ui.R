@@ -59,20 +59,33 @@ chart2_panel <- tabPanel(
 )
 
 # sidebar content for chart 3
-chart3_sidebar_content <- sidebarPanel()
+chart3_sidebar_content <- sidebarPanel(
+  selectInput(inputId = "Statemw", 
+              label = "State:",
+              choices = c("Alabama",
+                          "Michigan",
+                          "New York",
+                          "Washington",
+                          "Texas"
+              )
+  )
+)
 
 # main content for chart 3
-chart3_main_content <- mainPanel()
+chart3_main_content <- mainPanel(
+  plotlyOutput("scatterplot"))
+
 
 # tab panel for chart 3
 chart3_panel <- tabPanel(
-  "Chart 3",
-  titlePanel("Chart 3"), 
+  "Scatter Plot",
+  titlePanel("Chang in State Minimum Wage"),
   sidebarLayout(
     chart3_sidebar_content,
     chart3_main_content
   )
 )
+
 
 
 # tab panel for introduction
