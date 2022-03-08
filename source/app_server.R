@@ -47,8 +47,8 @@ server <- function(input, output) {
     
     scatter_plot <- ggplot(data = plot_data, mapping = aes(x = year_, y = state_minimum)) + 
       geom_point() + 
-      labs( x = "State Minimum Wage",
-            y = "Year",
+      labs( x = "Year",
+            y = "State Minimum Wage",
             title = "Change in State Minimum Wages Over Time"
       )
     

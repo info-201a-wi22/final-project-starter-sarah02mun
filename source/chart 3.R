@@ -16,7 +16,6 @@ plot_data <- min_wage_data %>%
            select(Year, State, State.Minimum.Wage)
 
 
-
 scatter_plot <- ggplot(data = plot_data, mapping = aes(x = Year, y = State.Minimum.Wage)) + 
   geom_point() + 
   facet_wrap(~State) +

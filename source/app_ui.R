@@ -1,9 +1,6 @@
 # load packages 
 library("shiny")
 
-#set working directory 
-setwd("~/Info-project/final-project-starter-sarah02mun")
-
 # load data
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
                           stringsAsFactors = FALSE)
@@ -65,14 +62,9 @@ chart2_panel <- tabPanel(
 chart3_sidebar_content <- sidebarPanel(
   selectInput(inputId = "Statemw", 
               label = "State:",
-              choices = c("Alabama",
-                          "Michigan",
-                          "New York",
-                          "Washington",
-                          "Texas"
-              )
+              choices = min_wage_data$State
   )
-)
+  )
 
 # main content for chart 3
 chart3_main_content <- mainPanel(
@@ -82,13 +74,18 @@ chart3_main_content <- mainPanel(
 # tab panel for chart 3
 chart3_panel <- tabPanel(
   "Scatter Plot",
-  titlePanel("Chang in State Minimum Wage"),
+  titlePanel("Change In State Minimum Wage"),
+  fluidPage(
+    p("This chart is a scatter plot that demonstrates the change in state minimum wage in each state 
+      in the United States since 1968. State can be selected from the box on the left. Once selected, 
+      state minimum wage from 1968 to 2020 will be shown on the right through scatter plot with x-axis 
+      that represents year and y-axis that represents state minimum wage."),
   sidebarLayout(
     chart3_sidebar_content,
     chart3_main_content
   )
 )
-
+)
 
 
 # tab panel for introduction
@@ -102,14 +99,14 @@ years; however, the state-level minimum wage has changed frequently over time. H
 in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth."),
     
     
-    P("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
+    p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
 Through this dataset, we were able to examine how the changes in minimum wage affects the consumer index price (CPI). We mainly focused on data collected in 2020 related to the average CPI, federal minimum wage, and 
 and state minimum wage to answer our research questions."),
     
     
     h1("Research Questions"),
     
-    P("How has the US states' minimum wage changed over time?"),
+    p("How has the US states' minimum wage changed over time?"),
     p("How has the federal minimum wage changed compared to consumer price index over time?"),
     p("How does the ratio of the US states' minimum wage to consumer price index change over time?"),
     
