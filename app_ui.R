@@ -31,7 +31,7 @@ chart1_main_content <- mainPanel(
 
 # tab panel for chart 1
 chart1_panel <- tabPanel(
-  "Map",
+  h3("Map", style =  "font-family: Tahoma;"),
   titlePanel("Ratios of State Minimum Wages to Consumer Price Index"),
   p("This map shows the ratio of each state's minimum wage to the consumer price
     index from 1968 to 2020. It attempts to answer the third research question, 
@@ -64,7 +64,7 @@ chart2_main_content <- mainPanel(
 
 # tab panel for chart 2
 chart2_panel <- tabPanel(
-  "Line Chart",
+  h3("Line Chart", style =  "font-family: Tahoma;"),
   titlePanel("Federal Minimum Wage vs. CPI Over Time"),
   fluidPage(
     p("This chart attempts to answer the question of how federal minimum wage 
@@ -95,7 +95,7 @@ chart3_main_content <- mainPanel(
 
 # tab panel for chart 3
 chart3_panel <- tabPanel(
-  "Scatter Plot",
+  h3("Scatter Plot", style =  "font-family: Tahoma;"),
   titlePanel("Change In State Minimum Wage"),
   fluidPage(
     p("This chart is a scatter plot that demonstrates the change in state minimum wage in each state 
@@ -112,7 +112,7 @@ chart3_panel <- tabPanel(
 
 # tab panel for introduction
 intro_panel <- tabPanel( 
-  "Introduction",
+  h3("Introduction", style =  "font-family: Tahoma;"), 
   titlePanel("Introduction"),
   #fluidPage(
     img(src = "https://accrumelb.com.au/wp-content/uploads/2021/06/Minimum-Wage-2021-Accru-Melbourne-1.jpg"),
@@ -120,31 +120,31 @@ intro_panel <- tabPanel(
     p(),
     
     
-    p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
+  p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
 years; however, the state-level minimum wage has changed frequently over time. High state-level minimum wages are related to local economic conditions or the standard of living in that state. The change in minimum wage generates variation 
-in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth."),
-    
-    
-    p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
+in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth.", style = "font-family: Bahnschrift SemiBold;"),
+  
+  
+  p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
 Through this dataset, we were able to examine how the changes in minimum wage affects the consumer index price (CPI). We mainly focused on data collected in 2020 related to the average CPI, federal minimum wage, and 
-and state minimum wage to answer our research questions."),
-    
-    
-    h3("Research Questions"),
-    
-    p("How has the US states' minimum wage changed over time?"),
-    p("How has the federal minimum wage changed compared to consumer price index over time?"),
-    p("How does the ratio of the US states' minimum wage to consumer price index change over time?"),
-    
-    p("Our data analysis answered our research questions and our findings are shown through different types of charts."),
-    
+and state minimum wage to answer our research questions.", style = "font-family: Bahnschrift SemiBold;"),
+  
+  
+  h3("Research Questions" , style = "font-family: Bahnschrift SemiBold;"),
+  
+  p("How has the US states' minimum wage changed over time?", style = "font-family: Bahnschrift SemiBold;"),
+  p("How has the federal minimum wage changed compared to consumer price index over time?", style = "font-family: Bahnschrift SemiBold;"),
+  p("How does the ratio of the US states' minimum wage to consumer price index change over time?", style = "font-family: Bahnschrift SemiBold;"),
+  
+  p("Our data analysis answered our research questions and our findings are shown through different types of charts.", style = "font-family: Bahnschrift SemiBold;"),
+  
  # )
 )
 
 
 # tab panel for summary
 summary_panel <- tabPanel( 
-  "Summary",
+  h3("Summary", style =  "font-family: Tahoma;"),
   titlePanel("Summary"),
   h3('Chart 1: Map'),
   p('1. Liberal states like California, Washington, and New York
@@ -168,8 +168,24 @@ summary_panel <- tabPanel(
 
 # tab panel for report
 report_panel <- tabPanel( 
-  "Report",
+  h3("Report", style =  "font-family: Tahoma;"),
   fluidPage(
+    tags$head(
+      tags$style(HTML("
+      @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+      body {
+        background-color: Gray;
+        color: white;
+      }
+      /* Change font of header text */
+      h2 {
+        font-family: 'Yusei Magic', sans-serif;
+      }
+      /* Make text visible on inputs */
+      .shiny-input-container {
+        color: #474747;
+      }"))
+    ),
     includeMarkdown('docs/report.md')
   )
 )
@@ -177,7 +193,7 @@ report_panel <- tabPanel(
 # Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- navbarPage(
-  "Analyzing US Minimum Wage Trends from 1968-2020",
+  h2("Analyzing US Minimum Wage Trends",style = "font-family: Arial Black;"),
   intro_panel,
   chart1_panel,
   chart2_panel,
