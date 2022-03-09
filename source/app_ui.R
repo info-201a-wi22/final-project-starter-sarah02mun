@@ -135,7 +135,7 @@ summary_panel <- tabPanel(
 report_panel <- tabPanel( 
   "Report",
   fluidPage(
-    includeMarkdown('../docs/p01-proposal.md')
+    includeMarkdown('../docs/report.md')
   )
 )
 
