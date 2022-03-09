@@ -10,7 +10,7 @@ library(ggplot2)
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
                           stringsAsFactors = FALSE)
 
-  
+
 # sidebar content for chart 1
 chart1_sidebar_content <- sidebarPanel(
   sliderInput(
@@ -31,11 +31,7 @@ chart1_main_content <- mainPanel(
 
 # tab panel for chart 1
 chart1_panel <- tabPanel(
-<<<<<<< HEAD:source/app_ui.R
-  h2("Map", style =  "font-family: Tahoma;"),
-  titlePanel("US State Minimum Wages"), 
-=======
-  "Map",
+  h3("Map", style =  "font-family: Tahoma;"),
   titlePanel("Ratios of State Minimum Wages to Consumer Price Index"),
   p("This map shows the ratio of each state's minimum wage to the consumer price
     index from 1968 to 2020. It attempts to answer the third research question, 
@@ -46,7 +42,6 @@ chart1_panel <- tabPanel(
     easily its citizens are able to afford basic goods and services. Higher 
     ratios indicate citizens are able to do this more easily, while lower ratios
     indicate citizens may struggle to afford these goods."),
->>>>>>> 73ea95ab19602ef2e8188ce1774e3aedb858e392:app_ui.R
   sidebarLayout(
     chart1_sidebar_content,
     chart1_main_content
@@ -69,7 +64,7 @@ chart2_main_content <- mainPanel(
 
 # tab panel for chart 2
 chart2_panel <- tabPanel(
-  "Line Chart",
+  h3("Line Chart", style =  "font-family: Tahoma;"),
   titlePanel("Federal Minimum Wage vs. CPI Over Time"),
   fluidPage(
     p("This chart attempts to answer the question of how federal minimum wage 
@@ -88,9 +83,9 @@ chart3_sidebar_content <- sidebarPanel(
   selectInput(inputId = "Statemw", 
               label = "State:",
               choices = min_wage_data$State
-
+              
   )
-
+  
 )
 
 # main content for chart 3
@@ -100,62 +95,56 @@ chart3_main_content <- mainPanel(
 
 # tab panel for chart 3
 chart3_panel <- tabPanel(
-  "Scatter Plot",
+  h3("Scatter Plot", style =  "font-family: Tahoma;"),
   titlePanel("Change In State Minimum Wage"),
   fluidPage(
     p("This chart is a scatter plot that demonstrates the change in state minimum wage in each state 
       in the United States since 1968. State can be selected from the box on the left. Once selected, 
       state minimum wage from 1968 to 2020 will be shown on the right through scatter plot with x-axis 
       that represents year and y-axis that represents state minimum wage."),
-  sidebarLayout(
-    chart3_sidebar_content,
-    chart3_main_content
+    sidebarLayout(
+      chart3_sidebar_content,
+      chart3_main_content
+    )
   )
-)
 )
 
 
 # tab panel for introduction
 intro_panel <- tabPanel( 
-  "Introduction",
+  h3("Introduction", style =  "font-family: Tahoma;"), 
   titlePanel("Introduction"),
-<<<<<<< HEAD:source/app_ui.R
-  fluidPage(
-    tags$img(src = "../docs/Minimum-Wage.jpg"),
-
-=======
   #fluidPage(
-    img(src = "https://accrumelb.com.au/wp-content/uploads/2021/06/Minimum-Wage-2021-Accru-Melbourne-1.jpg"),
+  img(src = "https://accrumelb.com.au/wp-content/uploads/2021/06/Minimum-Wage-2021-Accru-Melbourne-1.jpg"),
   
-    p(),
-    
-    
->>>>>>> 73ea95ab19602ef2e8188ce1774e3aedb858e392:app_ui.R
-    p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
+  p(),
+  
+  
+  p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
 years; however, the state-level minimum wage has changed frequently over time. High state-level minimum wages are related to local economic conditions or the standard of living in that state. The change in minimum wage generates variation 
 in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth.", style = "font-family: Bahnschrift SemiBold;"),
-    
-    
-    p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
+  
+  
+  p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
 Through this dataset, we were able to examine how the changes in minimum wage affects the consumer index price (CPI). We mainly focused on data collected in 2020 related to the average CPI, federal minimum wage, and 
 and state minimum wage to answer our research questions.", style = "font-family: Bahnschrift SemiBold;"),
-    
-    
-    h3("Research Questions" , style = "font-family: Bahnschrift SemiBold;"),
-    
-    p("How has the US states' minimum wage changed over time?", style = "font-family: Bahnschrift SemiBold;"),
-    p("How has the federal minimum wage changed compared to consumer price index over time?", style = "font-family: Bahnschrift SemiBold;"),
-    p("How does the ratio of the US states' minimum wage to consumer price index change over time?", style = "font-family: Bahnschrift SemiBold;"),
-    
-    p("Our data analysis answered our research questions and our findings are shown through different types of charts.", style = "font-family: Bahnschrift SemiBold;"),
-    
- # )
+  
+  
+  h3("Research Questions" , style = "font-family: Bahnschrift SemiBold;"),
+  
+  p("How has the US states' minimum wage changed over time?", style = "font-family: Bahnschrift SemiBold;"),
+  p("How has the federal minimum wage changed compared to consumer price index over time?", style = "font-family: Bahnschrift SemiBold;"),
+  p("How does the ratio of the US states' minimum wage to consumer price index change over time?", style = "font-family: Bahnschrift SemiBold;"),
+  
+  p("Our data analysis answered our research questions and our findings are shown through different types of charts.", style = "font-family: Bahnschrift SemiBold;"),
+  
+  # )
 )
 
 
 # tab panel for summary
 summary_panel <- tabPanel( 
-  "Summary",
+  h3("Summary", style =  "font-family: Tahoma;"),
   titlePanel("Summary"),
   h3('Chart 1: Map'),
   p('1. Liberal states like California, Washington, and New York
@@ -179,9 +168,8 @@ summary_panel <- tabPanel(
 
 # tab panel for report
 report_panel <- tabPanel( 
-  "Report",
+  h3("Report", style =  "font-family: Tahoma;"),
   fluidPage(
-<<<<<<< HEAD:source/app_ui.R
     tags$head(
       tags$style(HTML("
       @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
@@ -198,21 +186,14 @@ report_panel <- tabPanel(
         color: #474747;
       }"))
     ),
-    includeMarkdown('../docs/p01-proposal.md')
-=======
     includeMarkdown('docs/report.md')
->>>>>>> 73ea95ab19602ef2e8188ce1774e3aedb858e392:app_ui.R
   )
 )
 
 # Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- navbarPage(
-<<<<<<< HEAD:source/app_ui.R
   h2("Analyzing US Minimum Wage Trends",style = "font-family: Arial Black;"),
-=======
-  "Analyzing US Minimum Wage Trends from 1968-2020",
->>>>>>> 73ea95ab19602ef2e8188ce1774e3aedb858e392:app_ui.R
   intro_panel,
   chart1_panel,
   chart2_panel,
