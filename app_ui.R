@@ -27,7 +27,16 @@ chart1_main_content <- mainPanel(
 # tab panel for chart 1
 chart1_panel <- tabPanel(
   "Map",
-  titlePanel("US State Minimum Wages"), 
+  titlePanel("Ratios of State Minimum Wages to Consumer Price Index"),
+  p("This map shows the ratio of each state's minimum wage to the consumer price
+    index from 1968 to 2020. It attempts to answer the third research question, 
+    'How does the ratio of the US states' minimum wage to consumer price index 
+    change over time?' States with a higher minimum wage to CPI ratio are 
+    colored in darker shades while states with a lower minimum wage to CPI ratio
+    are colored in lighter shades. Each state's ratio gives insight into how 
+    easily its citizens are able to afford basic goods and services. Higher 
+    ratios indicate citizens are able to do this more easily, while lower ratios
+    indicate citizens may struggle to afford these goods."),
   sidebarLayout(
     chart1_sidebar_content,
     chart1_main_content
@@ -101,7 +110,11 @@ intro_panel <- tabPanel(
   "Introduction",
   titlePanel("Introduction"),
   #fluidPage(
-    img("alt text", src = "https://familymedicine.uw.edu/wp-content/uploads/2015/07/Sunset_seattle-1024x770.jpg"),
+    img(src = "https://accrumelb.com.au/wp-content/uploads/2021/06/Minimum-Wage-2021-Accru-Melbourne-1.jpg"),
+  
+    p(),
+    
+    
     p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
 years; however, the state-level minimum wage has changed frequently over time. High state-level minimum wages are related to local economic conditions or the standard of living in that state. The change in minimum wage generates variation 
 in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth."),
@@ -127,7 +140,24 @@ and state minimum wage to answer our research questions."),
 # tab panel for summary
 summary_panel <- tabPanel( 
   "Summary",
-  titlePanel("Summary")
+  titlePanel("Summary"),
+  h3('Chart 1: Map'),
+  p('1. Liberal states like California, Washington, and New York
+    tend to have higher state minimum wages and therefore higher state
+    minimum wage to consumer price index ratios.'),
+  p(),
+  h3('Chart 2: Line Chart'),
+  p("1. Federal minimum wage changed at an average rate of $0.12 per year."),
+  p("2. Consumer price index changed at average rate of $4.32 each year."),
+  p(),
+  h3('Chart 3: Scatterplot'),
+  p("1. State minimum wages in southern states like Tennessee, Alabama, Georgia,
+    and Florida change very slowly or don't change at all."),
+  p("2. State minimum wage varies completly from state to state. For example,
+    the state minimum wage in Wyoming is just over $5 while it is over $13 in
+    Washington."),
+  p("3. Some states like Tennessee, Alabama, Louisiana, South Carolina do not
+  have state minimum wages but adopt the federal minimum wage instead.")
 )
 
 
@@ -135,14 +165,14 @@ summary_panel <- tabPanel(
 report_panel <- tabPanel( 
   "Report",
   fluidPage(
-    includeMarkdown('../docs/report.md')
+    includeMarkdown('docs/report.md')
   )
 )
 
 # Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- navbarPage(
-  "Analyzing US Minimum Wage Trends",
+  "Analyzing US Minimum Wage Trends from 1968-2020",
   intro_panel,
   chart1_panel,
   chart2_panel,
