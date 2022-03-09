@@ -1,10 +1,6 @@
 # load packages 
 library("shiny")
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c9842b4ecc644b82e177eb2440b5ee20020a5b3d
 # load data
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
                           stringsAsFactors = FALSE)
@@ -30,7 +26,7 @@ chart1_main_content <- mainPanel(
 
 # tab panel for chart 1
 chart1_panel <- tabPanel(
-  "Map",
+  h2("Map", style =  "font-family: Tahoma;"),
   titlePanel("US State Minimum Wages"), 
   sidebarLayout(
     chart1_sidebar_content,
@@ -100,23 +96,24 @@ intro_panel <- tabPanel(
   titlePanel("Introduction"),
   fluidPage(
     tags$img(src = "../docs/Minimum-Wage.jpg"),
+
     p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
 years; however, the state-level minimum wage has changed frequently over time. High state-level minimum wages are related to local economic conditions or the standard of living in that state. The change in minimum wage generates variation 
-in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth."),
+in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth.", style = "font-family: Bahnschrift SemiBold;"),
     
     
     p("Our project studies the changes in minimum wage at the state and federal level. We conducted our research using a dataset titled, U.S. Minimum Wage by State from 1968 to 2020, from Kaggle.
 Through this dataset, we were able to examine how the changes in minimum wage affects the consumer index price (CPI). We mainly focused on data collected in 2020 related to the average CPI, federal minimum wage, and 
-and state minimum wage to answer our research questions."),
+and state minimum wage to answer our research questions.", style = "font-family: Bahnschrift SemiBold;"),
     
     
-    h3("Research Questions"),
+    h3("Research Questions" , style = "font-family: Bahnschrift SemiBold;"),
     
-    p("How has the US states' minimum wage changed over time?"),
-    p("How has the federal minimum wage changed compared to consumer price index over time?"),
-    p("How does the ratio of the US states' minimum wage to consumer price index change over time?"),
+    p("How has the US states' minimum wage changed over time?", style = "font-family: Bahnschrift SemiBold;"),
+    p("How has the federal minimum wage changed compared to consumer price index over time?", style = "font-family: Bahnschrift SemiBold;"),
+    p("How does the ratio of the US states' minimum wage to consumer price index change over time?", style = "font-family: Bahnschrift SemiBold;"),
     
-    p("Our data analysis answered our research questions and our findings are shown through different types of charts."),
+    p("Our data analysis answered our research questions and our findings are shown through different types of charts.", style = "font-family: Bahnschrift SemiBold;"),
     
   )
 )
@@ -133,6 +130,22 @@ summary_panel <- tabPanel(
 report_panel <- tabPanel( 
   "Report",
   fluidPage(
+    tags$head(
+      tags$style(HTML("
+      @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+      body {
+        background-color: Gray;
+        color: white;
+      }
+      /* Change font of header text */
+      h2 {
+        font-family: 'Yusei Magic', sans-serif;
+      }
+      /* Make text visible on inputs */
+      .shiny-input-container {
+        color: #474747;
+      }"))
+    ),
     includeMarkdown('../docs/p01-proposal.md')
   )
 )
@@ -140,7 +153,7 @@ report_panel <- tabPanel(
 # Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- navbarPage(
-  "Analyzing US Minimum Wage Trends",
+  h2("Analyzing US Minimum Wage Trends",style = "font-family: Arial Black;"),
   intro_panel,
   chart1_panel,
   chart2_panel,
