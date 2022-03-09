@@ -1,5 +1,10 @@
 # load packages
-library("shiny")
+library(shiny)
+library(plotly)
+library(dplyr)
+library(tidyverse)
+library(tidyr)
+library(ggplot2)
 
 # load data
 min_wage_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-sarah02mun/main/data/Minimum-Wage-Data.csv", 
