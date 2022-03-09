@@ -100,8 +100,8 @@ chart3_panel <- tabPanel(
 intro_panel <- tabPanel( 
   "Introduction",
   titlePanel("Introduction"),
-  fluidPage(
-    tags$img(src = "../docs/Minimum-Wage.jpg"),
+  #fluidPage(
+    img("alt text", src = "https://familymedicine.uw.edu/wp-content/uploads/2015/07/Sunset_seattle-1024x770.jpg"),
     p("The minimum wage varies across the United States. It has re-entered the forefront of policy discourse as federal and state proposals range from as low as $7.25 to as high as $17.25. The federal minimum wage has remained stagnant for several
 years; however, the state-level minimum wage has changed frequently over time. High state-level minimum wages are related to local economic conditions or the standard of living in that state. The change in minimum wage generates variation 
 in the consumer price index and allows us to identify the relationship between the minimum wage changes and inflation, as well as the consumption growth."),
@@ -120,7 +120,7 @@ and state minimum wage to answer our research questions."),
     
     p("Our data analysis answered our research questions and our findings are shown through different types of charts."),
     
-  )
+ # )
 )
 
 

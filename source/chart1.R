@@ -4,7 +4,7 @@ library("leaflet")
 library("plotly")
 
 #set wd
-setwd("C:/Users/viann/OneDrive/Desktop/INFO-201/final-project-starter-sarah02mun/data")
+#setwd("C:/Users/viann/OneDrive/Desktop/INFO-201/final-project-starter-sarah02mun/data")
 
 #load data
 min_wage_data <- read.csv("Minimum-Wage-Data.csv", stringsAsFactors = FALSE)
